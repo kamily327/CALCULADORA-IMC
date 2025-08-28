@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IMC</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gray-200 font-sans m-0 box-border p-0 ">
+
+    <style>
+         .font-sans{
+            font-family: sans-serif;
+         }
+  
+    </style>
+    
+    <main> 
+         <section class="flex items-center justify-center min-h-screen bg-gray-100 md:bg-gray-200 ">
+             <div class="">
+                <div class="flex flex-col items-center  justify-center  mx-auto w-full md:w-[700px] md:my-5 md:bg-gray-100 py-10 w-full "> 
+                     <div class="px-5 md:px-0">
+                         <p class="text-[1.4rem] text-gray-500">Peso</p>
+                         <input type="text" id="pesoInput" placeholder="Kg" class="mb-5 border border-orange-600 outline-none md:w-[450px] w-[360px] h-[45px] rounded-lg pl-2 ">
+                     </div>
+
+                   <div class="px-5 md:px-0">
+                         <p class="text-[1.4rem] text-gray-500">Altura</p>
+                         <input type="text" id="alturaInput" placeholder="Cm" class="mb-5 border border-orange-600 outline-none w-[360px] md:w-[450px] h-[45px] rounded-lg pl-2">
+                     </div>
+
+                     <div>
+                            <button id="btn" class="w-[360px] md:w-[450px] bg-orange-500 font-semibold h-[45px] rounded-lg text-white cursor-pointer">Calcular</button>
+                     </div>
+
+                     <div class=" 
+                     items-center text-[1.5rem] mt-10 flex flex-col "  id="saiba"> 
+                         <span class="text-2xl text-[#aaa]">Saiba agora se está no seu </span>
+                         <span class="text-2xl text-[#aaa]">peso ideal!</span>
+                        </div>
+                        
+                         <div class="hidden mt-10 " id="resultadoIMC">
+
+<div class="grid grid-cols-3 md:grid-cols-4 gap-1 w-[400px] mx-auto text-[1.3rem]  md:border-b md:border-orange-500 md:gap-4 p-3 text-center">
+  
+  <div class="">
+    <p class="text-orange-400 font-semibold text-[1.5rem] ">Peso</p>
+    <span class="pesoResultado text-[1.2rem] text-gray-500 text-center md:hidden"></span>
+  </div>
+
+  <div class=" ">
+    <p class="text-orange-400 font-semibold text-[1.5rem]">Altura</p>
+    <span class="alturaResultado text-[1.2rem] text-gray-500 md:hidden"></span>
+  </div>
+
+  <div class="">
+    <p class="text-orange-400 font-semibold text-[1.5rem]">IMC</p>
+    <span class="imcResultado text-[1.2rem] text-gray-500 md:hidden"></span>
+  </div>
+
+  <div class="col-span-3 mt-3 md:col-span-1 md:mt-0">
+    <p class="text-orange-400 font-semibold text-[1.5rem]  text-center">Resultado</p>
+    <span class="resultado text-[1.2rem] text-gray-500 text-center md:hidden"></span>
+  </div>
+  
+</div>
+
+
+                             
+
+                            <div class="grid md:grid-cols-4 grid-cols-1
+                             pt-3 text-[1.2rem] text-gray-500 mx-auto w-[400px] justify-center" >
+                                   <div class="text-center">
+                                 <span class="pesoResultado hidden md:inline-block"></span>
+                             </div>
+
+                             <div class="text-center">
+                                   <span class="alturaResultado hidden md:inline-block"></span>
+                             </div>
+
+                             <div class="text-center">
+                                    <span class="imcResultado hidden md:inline-block"></span>
+                             </div>
+
+                             <div class="text-center">
+                                    <span class="resultado hidden md:block whitespace-nowrap"></span>
+                             </div>
+                            </div>
+                           
+                         </div>
+                     
+
+                
+
+                              <div class="grid grid-cols-2 mt-10 shadow-lg 
+                              rounded-lg w-[400px] px-5 md:px-0">
+                               
+                                    <p class="text-orange-400 font-bold bg-gray-200 p-1 pl-5">IMC</p>
+                                        <p class="text-orange-400 font-bold  bg-gray-200  p-1  ">Classificação</p>
+            
+                                     
+                                
+                                 
+                            <div class="p-1 pl-5">Menos de 17</div>
+                            <div class="p-1 ">Muito abaixo do peso</div>
+
+                            <div class="p-1 pl-5 bg-gray-200">17 a 18.49</div>
+                            <div class="p-1 bg-gray-200">Abaixo do peso</div>
+
+                            <div class="p-1 pl-5 ">18.5 a 24.99</div>
+                            <div class="p-1">Peso normal</div>
+
+                            <div class="p-1 pl-5 bg-gray-200">25 a 29.99</div>
+                            <div class="p-1 bg-gray-200">Acima do peso</div>
+
+                            <div class="p-1 pl-5">30 ou mais</div>
+                            <div class="p-1">Obesidade</div>
+                              </div>
+
+                         
+                        </div>
+
+                    
+                        </div>
+
+                          
+                      
+                         
+                     </div>
+   
+                     </div>
+                </div>
+             </div>
+         </section>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
